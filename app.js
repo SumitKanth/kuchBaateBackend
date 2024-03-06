@@ -9,7 +9,7 @@ const app = express();
 dotenv.config()
 
 app.use(cors({
-    origin: process.env.FRONTENDURL,
+    origin: "https://kuchbaate.onrender.com",
     methods: ['GET', 'POST'],
     credentials: true
 }))
@@ -20,7 +20,7 @@ const server = createServer(app);
 
 const io = new Server(server, {
     cors:{
-        origin: process.env.FRONTENDURL,
+        origin: "https://kuchbaate.onrender.com",
         methods: ['GET', 'POST'],
         credentials: true
     }
